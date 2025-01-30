@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+
+    <p>
+      Simon Kagle <br>
+      skagle@ucsc.edu <br>
+      Notes to grader: 
+      <ul>
+        <li>Tail is 3 joint</li>
+        <li>Shift-Click to make hat jump</li>
+        <li>Drag mouse on canvas to rotate view</li>
+        <li>FPS needs 500ms to collect data before displaying</li>
+        <li>FPS counter only works when animation is enabled</li>
+      </ul>
+    </p>
+    
+    <br>
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <br>
+    frame time: <span id="frameTime">(calculating...) </span>ms, fps: <span id="fps">(calculating...)</span> fps
+
+    <br>
+    Rotation: <input type="range" min="0" max="360" id="Rotation" default="0"/>
+    <button id="animToggle">Toggle Animation</button>
+    <br>
+    Proximal Tail 
+    X <input type="range" min="-45" max="45", id="proxTX">
+    Y <input type="range" min="-45" max="45", id="proxTY">
+    <br>
+    Mid Tail 
+    X <input type="range" min="-45" max="45", id="midTX">
+    Y <input type="range" min="-45" max="45", id="midTY">
+    <br>
+    Distal Tail 
+    X <input type="range" min="-45" max="45", id="distTX">
+    Y <input type="range" min="-45" max="45", id="distTY">
+
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Shapes.js"></script>
+    <script src="BlockyAnimal.js"></script>
+  </body>
+</html>
